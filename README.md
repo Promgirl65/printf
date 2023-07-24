@@ -5,7 +5,11 @@ Secrets of printfby Don colton https://www.cypress.com/file/54761/download
 *Authorized functions and macros
 write (man 2 write) malloc (man 3 malloc) free (man 3 free) va_start (man 3 va_start) va_end (man 3 va_end) va_copy (man 3 va_copy) va_arg (man 3 va_arg)
 
+<<<<<<< HEAD
 *Compilation⚗️
+=======
+Compilation
+>>>>>>> e4e84c61a76aabda7553d612168f3b2b5d431ba2
 The code must be compiled this way:
 
 *$ gcc -Wall -Werror -Wextra -pedantic .c
