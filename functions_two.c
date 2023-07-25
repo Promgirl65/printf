@@ -51,7 +51,7 @@ int print_pointer(va_list types, char buffer[],
 	ind++;
 
 	/*return (write(1, &buffer[i], BUFF_SIZE - i - 1));*/
-	
+
 	return (write_pointer(buffer, ind, length,
 		width, flags, padd, extra_c, padd_start));
 }
@@ -70,25 +70,25 @@ int print_pointer(va_list types, char buffer[],
  */
 
 int print_non_printable(va_list types, char buffer[],
-	
+
 	int flags, int width, int precision, int size)
 {
 	int i = 0, offset = 0;
 	char *str = va_arg(types, char *);
 
 	UNUSED(flags);
-	
+
 	UNUSED(width);
-	
+
 	UNUSED(precision);
-	
+
 	UNUSED(size);
 
 	if (str == NULL)
 		return (write(1, "(null)", 6));
 
 	while (str[i] != '\0')
-	
+
 	{
 		if (is_printable(str[i]))
 			buffer[i + offset] = str[i];
